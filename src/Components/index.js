@@ -13,6 +13,7 @@ import { Container } from "./Container";
 import { Logo } from "./Logo";
 import {Protected} from './AuthLayout'
 import MyProfile from "./Profile/MyProfile";
+import logoimage from './logo.jpeg'
 export{
   Input,
   Select,
@@ -28,5 +29,6 @@ export{
   Postform,
   Protected,
   Footer,
-  MyProfile
+  MyProfile,
+  logoimage
 }
