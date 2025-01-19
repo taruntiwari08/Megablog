@@ -87,7 +87,7 @@ export function Postform({post}) {
 
     return (
         <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
-        <div className="w-2/3 px-2 font-bold font-serif">
+        <div className="lg:w-2/3 px-2 font-bold font-serif">
             <Input
                 label="Title "
                 placeholder="Title"
@@ -105,7 +105,7 @@ export function Postform({post}) {
             />
             <RTE label="Content " name="content" control={control} defaultValue={getValues("content")} />
         </div>
-        <div className="w-1/3 px-2 font-serif font-bold">
+        <div className="lg:w-1/3 px-2 lg:py-0 pt-3 font-serif font-bold">
             <Input
                 label="Featured Image "
                 type="file"

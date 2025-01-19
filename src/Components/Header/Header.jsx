@@ -1,18 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import {LogoutBtn, Logo, Container} from '../index'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import authService from '../../appwrite/auth'
 import { Link } from 'react-router-dom'
+import Hamburger from './Hamburger'
 
 export function Header() {
    
     const authStatus = useSelector(state => state.auth.status)
-   // const userID = useSelector(state => state.auth.userData?.$id)
     
     const navigate = useNavigate()
  
-
     const navItems = [
       {
         name: 'Home',
@@ -21,27 +19,27 @@ export function Header() {
       },{
         name: "Login",
         slug: "/login", 
-        active: !authStatus // shows only when authstatus is false that is log out 
+        active: !authStatus 
       },
       {
         name: "Signup",
         slug: "/signup",
-        active: !authStatus, // shows only when authstatus is false that is log out 
+        active: !authStatus, 
     },
     {
         name: "All Posts",
         slug: "/all-posts",
-        active: authStatus,  // show this option only if login
+        active: authStatus, 
     },
     {
         name: "Add Post",
         slug: "/add-post",
-        active: authStatus,   //// show this option only if login
+        active: authStatus,   
     },
     {
       name: "Profile",
       slug: "/profile",
-      active: authStatus,   //// show this option only if login
+      active: authStatus,  
   },
     
   
@@ -50,12 +48,12 @@ export function Header() {
       <header className='py-3 shadow bg-blue-900 w-full text-gray-100'>
       <Container>
         <nav className='flex justify-between items-center'>
-          <div className='mr-4'>
+          <div className=''>
             <Link to='/'>
-              <Logo classname=' h-[70px] w-[70px]'/>
+              <Logo classname=' ml-[-1px] h-12 w-12  md:h-[60px] md:w-[60px]'/>
             </Link>
           </div>
-          <ul className='flex ml-auto'>
+          <ul className='md:flex ml-auto hidden'>
             {navItems.map((item) =>
               item.active ? (
                 <li key={item.name}>
@@ -63,7 +61,7 @@ export function Header() {
                     onClick={() => navigate(item.slug)}
                     className='inline-block px-6 py-2 duration-200 hover:bg-blue-400 rounded-full'
                   >
-                    {item.name}
+                    {item.name} 
                   </button>
                 </li>
               ) : null
@@ -74,6 +72,9 @@ export function Header() {
               </li>
             )}
           </ul>
+          <div className='md:hidden'>
+          <Hamburger/>
+          </div>
         </nav>
       </Container>
     </header>

@@ -9,7 +9,6 @@ import { useNavigate } from 'react-router-dom'
     const navigate = useNavigate()
     const [loader, setloader] = useState(true)
     const authStatus = useSelector(state => state.auth.status)
-// authenication is the value provided by user which we later cross chr=eck with our database 's authstatus to give authenication to page
     useEffect(() => {
         //CONDITION TO PREVENT UNAUTHORISED LOGIN
       if(authenication && authStatus !== authenication){

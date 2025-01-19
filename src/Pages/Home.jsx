@@ -16,7 +16,6 @@ function Home() {
             });
     }, []);
 
-    // Typing animation state
     const [text, setText] = useState('');
     const fullText = "Login to See and Create Posts";
 
@@ -40,7 +39,7 @@ function Home() {
                 <Container>
                     <div className="flex flex-wrap">
                         <div className="p-2 w-full">
-                            <h1 className="text-8xl font-bold hover:text-gray-500 mb-52 mt-16">
+                            <h1 className="md:text-7xl text-4xl font-bold hover:text-gray-500 mb-52 mt-16">
                                 {text}
                             </h1>
                         </div>
@@ -52,9 +51,9 @@ function Home() {
         return (
             <div className='w-full py-8'>
                 <Container>
-                    <div className='flex flex-wrap'>
+                    <div className='md:flex flex-row md:flex-wrap'>
                         {posts.map((post) => (
-                            <div key={post.$id} className='p-2 w-1/4'>
+                            <div key={post.$id} className='p-2 lg:w-1/4'>
                                 <PostCard {...post} />
                             </div>
                         ))}
