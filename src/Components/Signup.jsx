@@ -33,7 +33,7 @@ export function Signup() {
           <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
             <div className="mb-2 flex justify-center">
                     <div >
-                        <Logo classname='mr-[110px]' />
+                        <Logo classname='md:mr-[110px]' />
                     </div>
                 </div>
                 <h2 className="text-center text-2xl font-bold leading-tight">Sign up to create account</h2>
