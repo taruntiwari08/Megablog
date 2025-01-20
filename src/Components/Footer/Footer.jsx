@@ -12,7 +12,7 @@ export function Footer() {
             <div className="w-full p-6 md:w-1/2 lg:w-5/12">
                 <div className="hidden -ml-48  md:flex h-full flex-col justify-between">
                     <div className="mb-4 inline-flex items-center">
-                        <Logo classname=' md:h-[60px] md:w-[60px] h-12 w-12 border border-solid border-t-2 border-l-2 border-b-2 border-r-2  border-gray-200 ' />
+                        <Logo classname=' md:h-[60px] ml-32 md:w-[60px] h-12 w-12 border border-solid border-t-2 border-l-2 border-b-2 border-r-2  border-gray-200 ' />
                     </div>
                     <div>
                         <p className="text-sm -ml-48 md:mb-28 text-gray-400 ">

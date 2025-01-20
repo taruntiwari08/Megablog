@@ -50,7 +50,7 @@ export function Header() {
         <nav className='flex justify-between items-center'>
           <div className=''>
             <Link to='/'>
-              <Logo classname=' ml-[-1px] h-12 w-12  md:h-[60px] md:w-[60px]'/>
+              <Logo classname='hidden lg:block h-[60px] w-[60px]'/>
             </Link>
           </div>
           <ul className='md:flex ml-auto hidden'>

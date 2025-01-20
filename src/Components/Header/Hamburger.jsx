@@ -83,7 +83,7 @@ function Hamburger() {
             ))}
             {authStatus && (
                 <li className ='-mt-4 '>
-                  <Link to="/logout" onClick={closeMenu}>
+                  <Link onClick={closeMenu}>
                     <LogoutBtn/>
                   </Link>
                 </li>
